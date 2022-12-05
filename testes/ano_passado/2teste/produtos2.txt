@@ -1,0 +1,5 @@
+batatas 10 3
+bacalhau 20 5
+couves 30 2
+cenoura 10 1
+grao 15 3
