@@ -1,0 +1,2 @@
+# IP_ULL_22-23
+Tudo o que fiz durante o primeiro semestre de Introduçao a programaçao na Universidade Lusiada de Lisboa
