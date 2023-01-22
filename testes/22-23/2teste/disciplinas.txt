@@ -1,0 +1,5 @@
+1 IP 20 0
+2 Fisica 14 0
+3 Matematica 10 0
+4 Historia 12 5
+5 Algebra 13 6

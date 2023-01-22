@@ -1,3 +1,4 @@
+// nota final 18.5v
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -18,28 +19,52 @@ int f3(int n)
 }
 
 // O "n" numero impar, com n > 0
-void f2(int n) {
-	int c=0;
-	int i=1;
+void f2(int n)
+{
+	int i, c;
+
 	if (!(n > 0))
 	{
 		printf("!!O NUMERO TEM DE SER MAIOR QUE ZERO!!");
 		return;
 	}
-	while (c < n) {
-		if ( (i % 2) == 1) {
+
+	i = 0;
+	c = 0;
+	while (i < n)
+	{
+		if (!(i % 2 == 0)) // ser primo
+		{
+			if (i == n)
+				printf("%d, ", i);
 			c++;
-			if ( c == n)
+		}
+	}
+	printf("\n");
+}
+
+// numeros impares
+void F3(int n)
+{
+	int c = 0;
+	int i = 1;
+	if (!(n > 0))
+	{
+		printf("!!O NUMERO TEM DE SER MAIOR QUE ZERO!!");
+		return;
+	}
+	while (c < n)
+	{
+		if ((i % 2) == 1)
+		{
+			c++;
+			if (c == n)
 				printf("%i", i);
 		}
 		i++;
 	}
 	printf("\n");
 }
-
-/* void F2(int n) {
-	printf("%d", ((2 * n) - 1));
-} */
 
 // Os "n" primeiros primos, com n > 0
 void f1(int n)
@@ -116,8 +141,7 @@ int main()
 			break;
 		case '2':
 			n = fNum("Digite o numero que deseja ver se e par ou impar: ");
-			f2(n);
-			F2(n);
+			F3(n);
 			break;
 		case '3':
 			n = fNum("Digite o numero para elevar ao 2: ");
