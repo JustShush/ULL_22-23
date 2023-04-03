@@ -1,0 +1,25 @@
+# Subject
+
+```
+The file "covid.csv" has daily information on the number of confirmed COVID-19 cases in Portugal since 26-02-2020 up to 13-03-2022. There are a lot of columns, but only the following are of our interest:
+
+data (coluna 1)
+confirmados (coluna 3)
+confirmados_arsnorte (coluna 4)
+confirmados_arscentro (coluna 5)
+confirmados_arslvt (coluna 6)
+confirmados_arsalentejo (coluna 7)
+confirmados_arsalgarve (coluna 8)
+confirmados_acores (coluna 9)
+confirmados_madeira (coluna 10)
+
+
+Please be aware of the following requirements!
+
+Create a struct and a typedef for this struct with the type name "covid_data_t". The date (data) column should be a struct with the following members: day, month, year
+Write a code in C (not C++) that takes the filename as a command line argument to the program.
+Write a function, parse_covid_data, that read the file into a (dynamic) array of "covid_data_t" structs, with the name "covid_data_lst". The list can either be returned from the function or passed by reference.
+Write a function called peak_day, which takes as arguments the list and a column (can be by name or "index"), a reference for the date-struct of "covid_data_t" and returns the largest increment in COVID cases from the beginning for that column (area). If there are multiple days with the same maximum, show the first one. Inside the function you can use a switch or if statement to filter out the correct column. You can assume that the array is ordered (unless you destroyed the order on purpose) and that all days exist in the file.
+Write a function peak_day_results to print the results with as arguments the column (or name) of the peak_day, the date and the increase.
+Write a function, release_covid_data, to free all allocated memory.
+```
