@@ -23,35 +23,17 @@ typedef struct covid_data_t
 	int confirmados_madeira;
 } covid_data_t;
 
-void red()
-{
-	printf("\033[1;91m");
-}
+void red(){ printf("\033[1;91m"); }
 
-void yellow()
-{
-	printf("\033[1;33m");
-}
+void yellow(){ printf("\033[1;33m"); }
 
-void blue()
-{
-	printf("\033[0;34m");
-}
+void blue(){ printf("\033[0;34m"); }
 
-void white()
-{
-	printf("\033[0;37m");
-}
+void white(){ printf("\033[0;37m"); }
 
-void info()
-{
-	printf("\033[0;36m");
-}
+void info(){ printf("\033[0;36m"); }
 
-void reset()
-{
-	printf("\033[0m");
-}
+void reset(){ printf("\033[0m"); }
 
 int parse_covid_data(const char *filename, covid_data_t **covid_data_lst[], int *num_cases)
 {
