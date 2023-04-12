@@ -23,27 +23,33 @@ typedef struct covid_data_t
 	int confirmados_madeira;
 } covid_data_t;
 
-void red() {
+void red()
+{
 	printf("\033[1;91m");
 }
 
-void yellow() {
+void yellow()
+{
 	printf("\033[1;33m");
 }
 
-void blue() {
+void blue()
+{
 	printf("\033[0;34m");
 }
 
-void white() {
+void white()
+{
 	printf("\033[0;37m");
 }
 
-void info() {
+void info()
+{
 	printf("\033[0;36m");
 }
 
-void reset() {
+void reset()
+{
 	printf("\033[0m");
 }
 
@@ -97,6 +103,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 
 	switch (idx)
 	{
+
 	case 1:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -113,6 +120,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 2:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -129,6 +137,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 3:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -145,6 +154,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 4:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -161,6 +171,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 5:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -177,6 +188,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 6:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -193,6 +205,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 7:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -209,6 +222,7 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_m
 		}
 		break;
 	}
+
 	case 8:
 	{
 		for (int i = 1; i < cases; ++i)
@@ -234,41 +248,49 @@ int peak_day_results(const int *max_day, const int *max_month, const int *max_ye
 	white();
 	switch (idx)
 	{
+
 	case 1:
 	{
 		printf("%d/%d/%d\t %d\t\t Nacional\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 2:
 	{
 		printf("%d/%d/%d\t %d\t\t Norte\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 3:
 	{
 		printf("%d/%d/%d\t %d\t\t Centro\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 4:
 	{
 		printf("%d/%d/%d\t %d\t\t Lisboa e vale do Tejo\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 5:
 	{
 		printf("%d/%d/%d\t %d\t\t Alentejo\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 6:
 	{
 		printf("%d/%d/%d\t %d\t\t Algarve\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 7:
 	{
 		printf("%d/%d/%d\t %d\t\t Acores\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
+
 	case 8:
 	{
 		printf("%d/%d/%d\t %d\t\t Madeira", *max_day, *max_month, *max_year, *max_cases_covid);
