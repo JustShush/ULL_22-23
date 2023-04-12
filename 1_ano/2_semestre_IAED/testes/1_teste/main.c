@@ -296,7 +296,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		info();
-		printf("Usage: %s <filename>\n", argv[0]);
+		printf("Como usar: %s <nome do ficheiro>\n", argv[0]);
 		reset();
 		return 1;
 	}
