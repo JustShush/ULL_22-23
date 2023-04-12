@@ -91,7 +91,7 @@ int parse_covid_data(const char *filename, covid_data_t **covid_data_lst[], int 
 	return 0;
 }
 
-int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_mes, int *max_ano, int *max_cases_covid, int idx)
+int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_day, int *max_month, int *max_year, int *max_cases_covid, int idx)
 {
 	int ant_peak_day = 0;
 
@@ -105,9 +105,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados - covid_data_lst[i - 1]->confirmados;
 			}
 		}
@@ -121,9 +121,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_arsnorte - covid_data_lst[i - 1]->confirmados_arsnorte;
 			}
 		}
@@ -137,9 +137,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_arscentro - covid_data_lst[i - 1]->confirmados_arscentro;
 			}
 		}
@@ -153,9 +153,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_arslvt - covid_data_lst[i - 1]->confirmados_arslvt;
 			}
 		}
@@ -169,9 +169,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_arsalentejo - covid_data_lst[i - 1]->confirmados_arsalentejo;
 			}
 		}
@@ -185,9 +185,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_arsalgarve - covid_data_lst[i - 1]->confirmados_arsalgarve;
 			}
 		}
@@ -201,9 +201,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_acores - covid_data_lst[i - 1]->confirmados_acores;
 			}
 		}
@@ -217,9 +217,9 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 			if (peak_day > ant_peak_day && i > 0)
 			{
 				ant_peak_day = peak_day;
-				*max_dia = covid_data_lst[i]->data.dia;
-				*max_mes = covid_data_lst[i]->data.mes;
-				*max_ano = covid_data_lst[i]->data.ano;
+				*max_day = covid_data_lst[i]->data.dia;
+				*max_month = covid_data_lst[i]->data.mes;
+				*max_year = covid_data_lst[i]->data.ano;
 				*max_cases_covid = covid_data_lst[i]->confirmados_madeira - covid_data_lst[i - 1]->confirmados_madeira;
 			}
 		}
@@ -229,49 +229,49 @@ int peak_day(covid_data_t *covid_data_lst[], int cases, int *max_dia, int *max_m
 	return 0;
 }
 
-int peak_day_results(const int *max_dia, const int *max_mes, const int *max_ano, const int *max_cases_covid, const int idx)
+int peak_day_results(const int *max_day, const int *max_month, const int *max_year, const int *max_cases_covid, const int idx)
 {
 	white();
 	switch (idx)
 	{
 	case 1:
 	{
-		printf("%d/%d/%d\t %d\t\t Nacional\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Nacional\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 2:
 	{
-		printf("%d/%d/%d\t %d\t\t Norte\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Norte\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 3:
 	{
-		printf("%d/%d/%d\t %d\t\t Centro\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Centro\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 4:
 	{
-		printf("%d/%d/%d\t %d\t\t Lisboa e vale do Tejo\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Lisboa e vale do Tejo\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 5:
 	{
-		printf("%d/%d/%d\t %d\t\t Alentejo\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Alentejo\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 6:
 	{
-		printf("%d/%d/%d\t %d\t\t Algarve\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Algarve\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 7:
 	{
-		printf("%d/%d/%d\t %d\t\t Acores\n", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Acores\n", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	case 8:
 	{
-		printf("%d/%d/%d\t %d\t\t Madeira", *max_dia, *max_mes, *max_ano, *max_cases_covid);
+		printf("%d/%d/%d\t %d\t\t Madeira", *max_day, *max_month, *max_year, *max_cases_covid);
 		break;
 	}
 	}
@@ -302,7 +302,7 @@ int main(int argc, char *argv[])
 	}
 	char *filename = argv[1];
 
-	int max_dia = 0, max_mes = 0, max_ano = 0, max_cases = 0;
+	int max_day = 0, max_month = 0, max_year = 0, max_cases = 0;
 
 	int tam_covid_lst = 0;
 
@@ -314,8 +314,8 @@ int main(int argc, char *argv[])
 	int indice = 1;
 	for (int i = 0; i < 8; ++i)
 	{
-		peak_day(covid_data_lst, tam_covid_lst, &max_dia, &max_mes, &max_ano, &max_cases, indice);
-		peak_day_results(&max_dia, &max_mes, &max_ano, &max_cases, indice);
+		peak_day(covid_data_lst, tam_covid_lst, &max_day, &max_month, &max_year, &max_cases, indice);
+		peak_day_results(&max_day, &max_month, &max_year, &max_cases, indice);
 		indice++;
 	}
 	printf("\n");
