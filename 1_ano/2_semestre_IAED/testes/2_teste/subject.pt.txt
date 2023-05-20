@@ -1,0 +1,17 @@
+Continuação do trabalho anterior a partir do programa anexado
+1. Converter o node (este aqui em baixo) para um Doubly Linked List:
+
+typedef struct sl_node_st {
+   covid_t *data;
+    int diff_total;
+    struct sl_node_st *next;
+} sl_node_t;
+2. Depois de inserir todos os dias no linked list, percorra a lista e coloca o valor de diferença no diff_total
+
+3. Bubblesort a lista por diff_total decrescente (do maior para menor)
+
+4. Imprima os primeiros 10 elementos
+
+5. Free a lista como deve ser (faz free a tudo que é preciso)
+
+6. Entrega o trabalho no moodle (aqui)
